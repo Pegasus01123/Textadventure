@@ -17,7 +17,7 @@ if start == "yes":
     else:
         print("Because you are afraid of getting poisend, you leave the well behind. Better endure a bit of thirst than getting poisend.")
     #second decision: Leprechaun
-    print("You wander on. you are in a lovely green meadow. Here and there are some birches and small bushes. Suddenly you see an old odd looking tree trunk. It looks like someone lives in it. You get curiose.") 
+    print("You wander on. you are in a lovely green meadow. Here and there are some birches and small bushes. Suddenly you see an old odd looking tree trunk. It looks like someone lives in it. You get curious.") 
     trunk = input ("Do you take a look inside? (yes / no) ")
     if trunk == "yes":
         print("You see a leprechaun sitting at a table, having a cup of tea. behind him is a huge pile of gold.")
@@ -29,7 +29,7 @@ if start == "yes":
                 print("You win 100 gold.")
                 treasure += 100
             elif (score_1 % 2 != 0 and score_1 <= 6):
-                print("You lost! The Lebrechaun uses his magic and turns you into a bush.")
+                print("You lost! The Leprechaun uses his magic and turns you into a bush.")
                 sys.exit()
             else:
                 print(cheat)
@@ -38,7 +38,11 @@ if start == "yes":
             print("You quietly leave this place and hope to get away save.")
     print("+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x")
     print("You wander on and will soon find yourself at a crossroad.")
-    crossroad = input ("Wich way do you take? (left / right)")
+    crossroad = input ("Which way do you take? (left / right)")
+    if crossroad == "right":
+        print("You find yourself in a very narrow and steep george. Suddenly you hear a loud rumbeling noise and somme small stones fall down. You take cover but the next stone that tumbles down the steep walls is fare bigger than the ones before. Your hideout is not big enough to give you shelter. \nMore and more stones are raining down. It becomes a real avalanche. A big stone hits you at your head. You die.")
+    if crossroad == "left":
+        print("")
 
 else:
     print("You are as cowardly as I am. You love to read about adventures but if it is your turn to go out and be brave, you decide to stay at home and read of other peoples adventures. ")
