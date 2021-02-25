@@ -72,6 +72,7 @@ if start == "yes":
         else:
             print("The path is getting even smaller")
     print("After lots of twists and turns you find yourself on a stoney plateau.")
+    
 
 else:
     print("You are as cowardly as I am. You love to read about adventures but if it is your turn to go out and be brave, you decide to stay at home and read of other peoples adventures. ")
