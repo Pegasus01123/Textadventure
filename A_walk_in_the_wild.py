@@ -101,8 +101,26 @@ if start == "yes":
         else:
             print("You start walking downwards. It's getting warmer and warmer. The light is getting more and more intense. Suddenly there is a sharp bent. Carefully you take a step round the corner. \nSadly you haven't been carefull enough. Your next step will only find thin air. Falling you see a sea of lava underneath.")
             sys.exit()
-    #elif crossroad_3 == "right":
-        #Sea with Krakzilla
+    elif crossroad_3 == "right":
+        #Sea with octopus
+        print("Slowly but surely the fog lifts. the path you took leads you gently downwards to a big lake. Far of the lakeside you can see a small island. Somehow you know you will find a treasure at the Island. But how do you get there? ")
+        sea = input("You could try to swim or search for some kind of boat. (swim / search) ")
+        if sea == "swim":
+            print("Because the weather is nice and warm you decide to swim. But after around half the way you feel something toutching your ankle. Looking down you see a creature that would be fascinating to watch out of a save boat. \nBut because you haven't got a boat it is terrifing. Looking like an octopus made out of jelly. Slimy but still solid. It wraps its tentacle round your feet and tries to pull you down. You have to fight it. ")
+            print("You roll the dice.")
+            score_4 = int(input("What is your score? "))
+            if (score_4 % 2 != 0 and score_4 <= 6):
+                print("You win 300 gold.")
+                treasure += 300
+            elif (score_4 % 2 == 0 and score_4 <= 6):
+                print("You lost! The slimy octopus hugs you and pulls you under water.")
+                sys.exit()
+            else:
+                print(cheat)
+                sys.exit()
+        else:
+            print("Hidden in the reed you find an old rusty tub. You decide to use this thing to get to the island without getting wet. A young tree has to work as oar.\nWhile you are on your way to the island you see something strange swimming underneath your boat. It looks a bit like an octopus but less solid more like a jellyfish in the shape of an octopus. \nFinally you arrive at the island. And indeed, in the middle of the island you find a chest with gold.")
+            treasure += 50
         
     else:
         print("You choose to walk straight on. The fog is getting thicker and thicker. Suddenly the sound of your steps changes. First you were walking on a massive stone plateau but suddenly there are small stones under your feet. With your next step the stones begin to move. You stumble. Trying to find your balance you take a step to the side but instead of a ground you find yourself stepping into thin air.")
