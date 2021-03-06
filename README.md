@@ -6,4 +6,4 @@
  But first and foremost: Have fun trying it out. 
  There are two possibilitys to play. If you have a dice you can use "A walk in the wild".
  If you don't own one, you can use "A walk no dice"
- I am still working on it. so please be patiend, I am still learning.
+ I am still working on it. So please be patiend, I am still learning.
