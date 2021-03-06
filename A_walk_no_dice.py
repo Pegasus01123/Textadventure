@@ -30,12 +30,10 @@ if start == "yes":
             if (dice.score % 2 == 0 and dice.score <= 6):
                 print("You win 100 gold.")
                 treasure += 100
-            elif (dice.score % 2 != 0 and dice.score <= 6):
+            else: 
                 print("You lost! The Leprechaun uses his magic and turns you into a bush.")
                 sys.exit()
-            #else:
-                #print(cheat)
-                #sys.exit()
+            
         else:
             print("You quietly leave this place and hope to get away save.")
     print("+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x")
@@ -66,21 +64,56 @@ if start == "yes":
                     if (dice.score != 6):
                         print("You win 100 gold.")
                         treasure += 20
-                    elif (dice.score == 6):
+                    else: 
                         print("You lost! The rat uses your mallets to beat you up.")
                         sys.exit()
-                    #else:
-                        #print(cheat)
-                        #sys.exit()
                 else:
                     print("You leave the gold and move on.") 
         
         else:
             print("The path is getting even smaller")
-    print("After lots of twists and turns you find yourself on a stoney plateau.")
+    print("After lots of twists and turns you find yourself on a stoney plateau. It's dark and foggy.\nThere is an old signpost with three arms laying on the ground. One of the signs states 'Danger'. But which way was meant?")
     #crossroad
+    crossroad_3 = input("Which way do you take? (straight / left / right) ")
+    if crossroad_3 == "left":
+        #cave with minotaur
+        print("After some time walking in a foggy night you find yourself yet in an other cave. But this time you see a red light shining in front of you.")
+        cave_2 = input("In front of you are two ways similar lit by this gloomy red light. One leads down, one to the left. (down / left) ")
+        if cave_2 == "left":
+            print("You start walking. It's getting warmer and warmer. The light is getting more and more intense. Suddenly there is a sharp bent. Carefully you take a step round the corner.\nYou find yourself in a hugh cave. Its inhabitant is a tremendously big what? A Bull, a minotour? You are not sure about it. \nBut the nature of the creature is not your biggest problem as it starts walking up to you dragging a big whip behind him.\nSuddenly a big stone crashes down behind you blocking your retreat. You have to fight. ")
+            print(f"You rolled: {dice.score}")
+            if (dice.score == 6 or dice.score == 1):
+                print("You win 1000 gold.")
+                treasure += 1000
+            else: 
+                print("You lost! The minotaur uses its whip to rip the flesh of your bones.")
+                sys.exit()
+        else:
+            print("You start walking downwards. It's getting warmer and warmer. The light is getting more and more intense. Suddenly there is a sharp bent. Carefully you take a step round the corner. \nSadly you haven't been carefull enough. Your next step will only find thin air. Falling you see a sea of lava underneath.")
+            sys.exit()
+    elif crossroad_3 == "right":
+        #Sea with octopus
+        print("Slowly but surely the fog lifts. the path you took leads you gently downwards to a big lake. Far of the lakeside you can see a small island. Somehow you know you will find a treasure at the Island. But how do you get there? ")
+        sea = input("You could try to swim or search for some kind of boat. (swim / search) ")
+        if sea == "swim":
+            print("Because the weather is nice and warm you decide to swim. But after around half the way you feel something toutching your ankle. Looking down you see a creature that would be fascinating to watch out of a save boat. \nBut because you haven't got a boat it is terrifing. Looking like an octopus made out of jelly. Slimy but still solid. It wraps its tentacle round your feet and tries to pull you down. You have to fight it. ")
+            print(f"You rolled: {dice.score}")
+            if (dice.score % 2 != 0 and dice.score <= 6):
+                print("You win 300 gold.")
+                treasure += 300
+            else: 
+                print("You lost! The slimy octopus hugs you and pulls you under water.")
+                sys.exit()
+                
+        else:
+            print("Hidden in the reed you find an old rusty tub. You decide to use this thing to get to the island without getting wet. A young tree has to work as oar.\nWhile you are on your way to the island you see something strange swimming underneath your boat. It looks a bit like an octopus but less solid more like a jellyfish in the shape of an octopus. \nFinally you arrive at the island. And indeed, in the middle of the island you find a chest with gold.")
+            treasure += 50
+        
+    else:
+        print("You choose to walk straight on. The fog is getting thicker and thicker. Suddenly the sound of your steps changes. First you were walking on a massive stone plateau but suddenly there are small stones under your feet. With your next step the stones begin to move. You stumble. Trying to find your balance you take a step to the side but instead of a ground you find yourself stepping into thin air.")
+        sys.exit()
 
-    
+    print(f"After all this adventures you decide to take a rest. You find a nice looking guesthouse and rent a small room. After refreshing yourself you count the gold you discovered. \nOn your adventures you found {treasure} gold.")
 
 else:
     print("You are as cowardly as I am. You love to read about adventures but if it is your turn to go out and be brave, you decide to stay at home and read of other peoples adventures. ")
