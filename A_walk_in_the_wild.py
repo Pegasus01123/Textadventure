@@ -17,7 +17,9 @@ if start == "yes":
     else:
         print("Because you are afraid of getting poisend, you leave the well behind. Better endure a bit of thirst than getting poisend.")
     #second decision: Leprechaun
+
     print("You wander on. You are in a lovely green meadow. Here and there are some birches and small bushes. Suddenly you see an old odd looking tree trunk. It looks like someone lives in it. You get curiouse.") 
+
     trunk = input ("Do you take a look inside? (yes / no) ")
     if trunk == "yes":
         print("You see a leprechaun sitting at a table, having a cup of tea. behind him is a huge pile of gold.")
@@ -39,6 +41,7 @@ if start == "yes":
     print("+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x")
     #crossroad
     print("You wander on and will soon find yourself at a crossroad.")
+
     crossroad_1 = input ("Which way do you take? (left / right) ")
     if crossroad_1 == "right":
         print("On your way to your next adventure you suddenly find yourself in a small gorge. The way is getting more and more narrow. Listen! Can you hear that strange sound? \nAlarmed you look up but it is allready to late. Stones beginn to rain down on you. Hastely you try to take cover but a large rock hits you at the head. Everything is getting dark around you. ")
@@ -77,7 +80,8 @@ if start == "yes":
             print("The path is getting even smaller")
     print("After lots of twists and turns you find yourself on a stoney plateau.")
     #crossroad
-    
+   
+
 
 else:
     print("You are as cowardly as I am. You love to read about adventures but if it is your turn to go out and be brave, you decide to stay at home and read of other peoples adventures. ")
